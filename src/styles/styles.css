@@ -1,0 +1,224 @@
+/* ---- Fondo de la Página ---- */
+body {
+    background: linear-gradient(to right, #1A1A1A, #000000);
+    color: #E0E0E0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    transition: background 0.3s ease-in-out;
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.85);
+    box-shadow: 6px 0 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 0 15px 15px 0;
+}
+
+.sidebar .sidebar-header h2 {
+    color: #E0E0E0;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar nav ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #E0E0E0;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.sidebar nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+}
+
+
+
+/* ---- Modo Oscuro / Claro ---- */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #E0E0E0;
+    font-size: 26px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* ---- Contenido en Caja Transparente ---- */
+.content {
+    margin-left: 280px;
+    padding: 20px;
+}
+
+.content-box {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+.content-box:hover {
+    transform: scale(1.02);
+}
+
+/* ---- Modo Claro ---- */
+.light {
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+    color: #333;
+}
+
+.light .sidebar {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 6px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.light .sidebar nav ul li a {
+    color: #333;
+}
+
+.light .sidebar nav ul li a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.light .content-box {
+    background: rgba(255, 255, 255, 0.8);
+    color: #333;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ---- Modo Oscuro ---- */
+.dark {
+    background: linear-gradient(to right, #1A1A1A, #000000);
+    color: #E0E0E0;
+}
+
+.dark .sidebar {
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.dark .content-box {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ---- Sidebar ---- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    border-radius: 0 15px 15px 0;
+}
+
+/* ---- Botón de Cerrar Sesión (Ajustado) ---- */
+.logout-btn {
+    background: none;
+    border: 2px solid #a52a2a;
+    color: #E0E0E0;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-top: auto; /* Mantiene su posición hacia abajo */
+    margin-bottom: 40px; /* Subido unos píxeles */
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ---- Efecto Hover: Relleno del color ---- */
+.logout-btn:hover {
+    background: #a52a2a; /* Se rellena de color */
+    color: #fff;
+}
+
+
+/* ---- Botón de Modo Noche ---- */
+.theme-toggle {
+    background: none;
+    border: none;
+    color: #E0E0E0;
+    font-size: 26px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.2);
+}
+
+/* ---- Servidor ---- */
+.servidor-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin-top: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.online {
+    border-left: 5px solid #4CAF50;
+}
+
+.offline {
+    border-left: 5px solid #D32F2F;
+}
+
+.servidor-historial ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servidor-historial li {
+    padding: 5px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.servidor-historial li:last-child {
+    border-bottom: none;
+}
+
+
+
