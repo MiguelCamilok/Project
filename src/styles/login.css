@@ -1,34 +1,51 @@
-/* Contenedor principal del login */
+/* Contenedor principal */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap');
+body {
+    background: linear-gradient(to right, #1A1A1A, #000000);
+    color: #E0E0E0;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    transition: background 0.3s ease-in-out;
+}
+
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(to right, #1A1A1A, #000000); /* Fondo oscuro */
 }
 
-/* Caja de login más grande */
+/* Caja de login */
 .login-box {
     width: 350px;
-    padding: 40px;
+    padding: 10px 30px 30px;
     border-radius: 15px;
-    background: rgba(255, 255, 255, 0.1); /* Transparente con blur */
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     text-align: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* Logo más grande */
+/* Logo centrado y ajustado */
 .login-logo {
-    width: 120px; /* Ajusta según necesidad */
-    margin-bottom: 20px;
+    width: 300px;
+    margin-bottom: -100px; /* Menos espacio entre logo y título */
 }
 
-/* Estilo de los inputs */
+/* Título con menos margen */
+.login-box h2 {
+    margin-bottom: 15px; /* Se reduce para que esté más pegado al logo */
+    font-size: 22px;
+    color: white;
+}
+
+/* Estilos para los inputs */
 .login-box input {
-    width: 100%;
+    width: 90%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 8px 0;
     border: none;
     border-radius: 5px;
     background: rgb(73, 71, 71);
@@ -38,7 +55,7 @@
 
 /* Botón de ingresar */
 .login-box button {
-    width: 100%;
+    width: 90%;
     padding: 12px;
     margin-top: 10px;
     border: none;
@@ -51,25 +68,20 @@
 }
 
 .login-box button:hover {
-    background: #a52a2a; /* Un vinotinto más claro */
+    background: #a52a2a; /* Vinotinto más claro */
 }
 
-/* Centrar mejor los inputs */
-.login-box form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+/* Enlace de recuperar contraseña */
+.forgot-password {
+    display: block;
+    margin-top: 10px;
+    color: #b0b0b0;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s;
 }
 
-/* Ajustar inputs para que estén más centrados */
-.login-box input {
-    width: 90%; /* Antes ocupaban todo, ahora dejamos margen */
-    max-width: 300px; /* Evita que se expandan demasiado */
-}
-
-/* Ajustar el botón */
-.login-box button {
-    width: 90%;
-    max-width: 300px;
+.forgot-password:hover {
+    color: white;
+    text-decoration: underline;
 }

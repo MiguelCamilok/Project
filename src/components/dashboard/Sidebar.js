@@ -3,8 +3,7 @@ import { Link } from "react-router-dom";
 import { FiHome, FiBarChart2, FiFileText, FiSettings, FiDatabase, FiServer, FiLogOut } from "react-icons/fi";
 import "../../styles/styles.css";
 
-
-const Sidebar = ({ toggleTheme }) => {
+const Sidebar = ({ toggleTheme, handleLogout }) => {
     return (
         <div className="sidebar">
             <div className="sidebar-header">
@@ -20,13 +19,14 @@ const Sidebar = ({ toggleTheme }) => {
                     <li><Link to="/backup"><FiDatabase /> Copia de Seguridad</Link></li>
                     <li><Link to="/servidor"><FiServer /> Estado del Servidor</Link></li>
                     <li><Link to="/configuracion"><FiSettings /> Configuración</Link></li>
-                    
                 </ul>
             </nav>
 
             <button className="theme-toggle" onClick={toggleTheme}>🌙</button>
 
-            <button className="logout-btn"><FiLogOut /> Cerrar Sesión</button>
+            <button className="logout-btn" onClick={handleLogout}>
+                <FiLogOut /> Cerrar Sesión
+            </button>
         </div>
     );
 };

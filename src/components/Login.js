@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import "../styles/login.css";
+import logo from '../assets/logo.png'; // Asegúrate de que la imagen esté en la carpeta correcta
 
 const Login = ({ handleLogin }) => {
     const [email, setEmail] = useState("");
@@ -11,29 +12,30 @@ const Login = ({ handleLogin }) => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
+    
         try {
             const response = await axios.post('http://localhost:3001/login', {
                 email,
                 password,
                 key
             });
-
+    
             if (response.status === 200) {
-                // Guardamos el estado de autenticación
+                localStorage.setItem("user", JSON.stringify(response.data.user));
                 handleLogin();
-                // Redirigimos al servidor o al perfil
                 navigate("/servidor");
-            }
+            }                       
         } catch (error) {
             console.error('Error al hacer login', error);
             alert("Credenciales incorrectas");
         }
     };
+    
 
     return (
         <div className="login-container">
             <div className="login-box">
+                <img src={logo} alt="Logo" className="login-logo" />
                 <h2>Iniciar Sesión</h2>
                 <form onSubmit={handleSubmit}>
                     <input 
@@ -57,8 +59,10 @@ const Login = ({ handleLogin }) => {
                         onChange={(e) => setKey(e.target.value)} 
                         required 
                     />
+                    <a href="#" className="forgot-password">¿Olvidaste tu contraseña?</a>
                     <button type="submit">Ingresar</button>
                 </form>
+                
             </div>
         </div>
     );
