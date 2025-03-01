@@ -57,7 +57,7 @@
 }
 
 .edit-profile {
-    position: absolute;
+    position: relative;
     bottom: 5px;
     left: 50%;
     transform: translateX(-50%);
@@ -91,8 +91,8 @@
 /* Ícono de edición */
 .edit-icon {
     position: absolute;
-    top: 10px;
-    right: 15px;
+    top: 40px; /* Ajusta la distancia desde la parte superior del contenedor */
+    right: 600px; /* Coloca el ícono en la parte derecha */
     font-size: 20px;
     color: white;
     cursor: pointer;
@@ -103,6 +103,7 @@
     color: #ff4d4d;
 }
 
+
 /* Modal de edición */
 .edit-modal {
     position: fixed;
@@ -112,9 +113,11 @@
     background: rgba(0, 0, 0, 0.9);
     padding: 20px;
     border-radius: 5px;
-    width: 300px;
+    width: 320px;
     text-align: center;
     z-index: 200;
+    cursor: move;
+    user-select: none;
 }
 
 .edit-modal label {
@@ -133,23 +136,31 @@
     color: white;
 }
 
-.edit-modal button {
-    background: #ff4d4d;
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    margin-top: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 14px;
-    transition: 0.3s;
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
 }
 
-.edit-modal .close-btn {
+.modal-buttons .close-btn {
     background: #333;
 }
 
-.edit-modal button:hover {
+.modal-buttons .save-btn {
+    background: #ff4d4d;
+}
+
+.modal-buttons button {
+    border: none;
+    padding: 10px;
+    width: 48%;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+    color: white;
+    transition: 0.3s;
+}
+
+.modal-buttons .save-btn:hover {
     background: #e60000;
 }
